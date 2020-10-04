@@ -1,10 +1,34 @@
+function renderStudents(studentsAbstraction) {
 
-function renderStudents(students) {
-    return `
+    // We're using a .map() to build a new array containing
+    // an HTML string for each student
+    let studentsArray = studentsAbstraction.map(function(student) {
+
+        // We're using a ternary operator which is shorthand for writing
+        // an if/else block. 
+        return `
+            <div class="${student.isPresent ? "present" : "absent"}">
+                <h2>${student.name}</h2>
+                <span>
+                    ${student.isPresent ? 'Present' : 'Absent'}
+                </span>
+            </div>
+        `
+    // calling join right here because we know at this point we'll have
+    // an array
+    }).join('');
+
+    // Setting up a string of html that includes the array of HTML strings
+    // we created above, and already joined together into one big string. 
+    // The result is that newHtml is just one big string of HTML
+    let newHtml =  `
         <div class="text-center mt-5">
-            <code>${JSON.stringify(students)}</code>
+            <h1> Roll Call! </h1>
+            ${studentsArray}
         </div>
     `
+    // gotta return it!
+    return newHtml;
 }
 
 function students() {
@@ -33,5 +57,5 @@ function students() {
         }
     ]
 
-    content.innerHTML = renderStudents(studentsAbstraction);
+    content.innerHTML = renderStudents(studentsAbstraction)
 }

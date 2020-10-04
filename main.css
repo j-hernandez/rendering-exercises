@@ -1,1 +1,23 @@
 /* Type whatever CSS you need here! */
+.nametag {
+    width: 268px;
+    height: 147px;
+}
+
+.nametag-header {
+    background-color:blue;
+    color:#fff;
+    font-size:20px;
+}
+
+.nametag-body {
+    padding: 40px;
+}
+
+.present {
+    background-color: green;
+}
+
+.absent {
+    background-color: red;
+}

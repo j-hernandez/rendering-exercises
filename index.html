@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="renderRectangle.js"></script>
+    <script defer src="renderRectangle.js"></script>
     <script src="renderCircles.js"></script>
     <script src="renderNametags.js"></script>
     <script src="renderStudents.js"></script>
@@ -21,7 +21,7 @@
 <body>
     <div class="container">
         <div class="d-flex flex-wrap justify-content-around">
-            <button type="button" class="btn btn-primary render-button mt-1" onclick="rectangle()">Render Rectangle</button>
+            <button id="rectangle-button" type="button" class="btn btn-primary render-button mt-1" onclick="rectangle()">Render Rectangle</button>
             <button type="button" class="btn btn-primary render-button mt-1" onclick="circles()">Render Circles</button>
             <button type="button" class="btn btn-primary render-button mt-1" onclick="nametags()">Render Name Tags</button>
             <button type="button" class="btn btn-primary render-button mt-1" onclick="students()">Render Students</button>
